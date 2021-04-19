@@ -1,0 +1,131 @@
+Sending build context to Docker daemon  197.3MB
+Step 1/43 : FROM nciccbr/ccbr_ubuntu_base_20.04:v1.3
+v1.3: Pulling from nciccbr/ccbr_ubuntu_base_20.04
+a70d879fa598: Pulling fs layer
+c4394a92d1f8: Pulling fs layer
+10e6159c56c0: Pulling fs layer
+495c87e93332: Pulling fs layer
+e6d1a0b1d761: Pulling fs layer
+e4357c3f3ae6: Pulling fs layer
+6823fd269082: Pulling fs layer
+c8b3a6787d36: Pulling fs layer
+8f1d592ed584: Pulling fs layer
+6457abe9a4c8: Pulling fs layer
+1ac6a5ddcac4: Pulling fs layer
+8c185cb1d043: Pulling fs layer
+03378c9d9fb2: Pulling fs layer
+558bec3d1149: Pulling fs layer
+cf51797a530c: Pulling fs layer
+e2634533fc3d: Pulling fs layer
+35127720beb2: Pulling fs layer
+de47c8406856: Pulling fs layer
+f23c3122d7ce: Pulling fs layer
+bede9f090cef: Pulling fs layer
+eaef47d0d7e8: Pulling fs layer
+a74d8df13f74: Pulling fs layer
+728fa2140e7d: Pulling fs layer
+495c87e93332: Waiting
+e6d1a0b1d761: Waiting
+e4357c3f3ae6: Waiting
+6823fd269082: Waiting
+c8b3a6787d36: Waiting
+8f1d592ed584: Waiting
+6457abe9a4c8: Waiting
+1ac6a5ddcac4: Waiting
+8c185cb1d043: Waiting
+03378c9d9fb2: Waiting
+558bec3d1149: Waiting
+cf51797a530c: Waiting
+e2634533fc3d: Waiting
+35127720beb2: Waiting
+de47c8406856: Waiting
+f23c3122d7ce: Waiting
+bede9f090cef: Waiting
+eaef47d0d7e8: Waiting
+a74d8df13f74: Waiting
+728fa2140e7d: Waiting
+c4394a92d1f8: Verifying Checksum
+c4394a92d1f8: Download complete
+10e6159c56c0: Verifying Checksum
+10e6159c56c0: Download complete
+e6d1a0b1d761: Verifying Checksum
+e6d1a0b1d761: Download complete
+495c87e93332: Verifying Checksum
+495c87e93332: Download complete
+a70d879fa598: Verifying Checksum
+a70d879fa598: Download complete
+c8b3a6787d36: Verifying Checksum
+c8b3a6787d36: Download complete
+e4357c3f3ae6: Verifying Checksum
+e4357c3f3ae6: Download complete
+8f1d592ed584: Verifying Checksum
+8f1d592ed584: Download complete
+a70d879fa598: Pull complete
+c4394a92d1f8: Pull complete
+10e6159c56c0: Pull complete
+495c87e93332: Pull complete
+e6d1a0b1d761: Pull complete
+1ac6a5ddcac4: Verifying Checksum
+1ac6a5ddcac4: Download complete
+e4357c3f3ae6: Pull complete
+8c185cb1d043: Verifying Checksum
+8c185cb1d043: Download complete
+6823fd269082: Verifying Checksum
+6823fd269082: Download complete
+6457abe9a4c8: Verifying Checksum
+6457abe9a4c8: Download complete
+558bec3d1149: Verifying Checksum
+558bec3d1149: Download complete
+03378c9d9fb2: Verifying Checksum
+03378c9d9fb2: Download complete
+6823fd269082: Pull complete
+c8b3a6787d36: Pull complete
+35127720beb2: Verifying Checksum
+35127720beb2: Download complete
+8f1d592ed584: Pull complete
+de47c8406856: Verifying Checksum
+de47c8406856: Download complete
+f23c3122d7ce: Verifying Checksum
+f23c3122d7ce: Download complete
+bede9f090cef: Verifying Checksum
+bede9f090cef: Download complete
+eaef47d0d7e8: Verifying Checksum
+eaef47d0d7e8: Download complete
+a74d8df13f74: Verifying Checksum
+a74d8df13f74: Download complete
+728fa2140e7d: Verifying Checksum
+728fa2140e7d: Download complete
+e2634533fc3d: Verifying Checksum
+e2634533fc3d: Download complete
+cf51797a530c: Verifying Checksum
+cf51797a530c: Download complete
+6457abe9a4c8: Pull complete
+1ac6a5ddcac4: Pull complete
+8c185cb1d043: Pull complete
+03378c9d9fb2: Pull complete
+558bec3d1149: Pull complete
+cf51797a530c: Pull complete
+e2634533fc3d: Pull complete
+35127720beb2: Pull complete
+de47c8406856: Pull complete
+f23c3122d7ce: Pull complete
+bede9f090cef: Pull complete
+eaef47d0d7e8: Pull complete
+a74d8df13f74: Pull complete
+728fa2140e7d: Pull complete
+Digest: sha256:7e20af6283375b4c816a5f334832872feeeadc155ebb602c094cf00ac5940a34
+Status: Downloaded newer image for nciccbr/ccbr_ubuntu_base_20.04:v1.3
+ ---> 97fa0784ffda
+Step 2/43 : RUN apt-get upgrade
+ ---> Running in ad36c7b0ab83
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  apt libapt-pkg6.0 libprocps8 libseccomp2 libsystemd0 libudev1 procps
+7 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2779 kB of archives.
+After this operation, 193 kB disk space will be freed.
+[91mE[0m[91m: [0m[91mYou don't have enough free space in /var/cache/apt/archives/.[0m[91m
+[0m
