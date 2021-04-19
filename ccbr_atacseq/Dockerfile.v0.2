@@ -1,6 +1,6 @@
 FROM nciccbr/ccbr_ubuntu_base_20.04:v1.3
 
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 
 # install cutadapt
 RUN	pip3 install cutadapt==1.18
