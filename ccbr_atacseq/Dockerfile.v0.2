@@ -6,7 +6,7 @@ RUN apt-get upgrade -y
 RUN	pip3 install cutadapt==1.18
 
 # install preseq
-RUN apt-get install -y libcurl
+RUN apt-get install -y libcurl4
 WORKDIR /opt2
 ADD https://github.com/samtools/htslib/releases/download/1.12/htslib-1.12.tar.bz2 /opt2
 RUN tar -xjvf htslib-1.12.tar.bz2
