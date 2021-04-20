@@ -1,123 +1,12 @@
 Sending build context to Docker daemon  197.3MB
-Step 1/43 : FROM nciccbr/ccbr_ubuntu_base_20.04:v1.3
-v1.3: Pulling from nciccbr/ccbr_ubuntu_base_20.04
-a70d879fa598: Pulling fs layer
-c4394a92d1f8: Pulling fs layer
-10e6159c56c0: Pulling fs layer
-495c87e93332: Pulling fs layer
-e6d1a0b1d761: Pulling fs layer
-e4357c3f3ae6: Pulling fs layer
-6823fd269082: Pulling fs layer
-c8b3a6787d36: Pulling fs layer
-8f1d592ed584: Pulling fs layer
-6457abe9a4c8: Pulling fs layer
-1ac6a5ddcac4: Pulling fs layer
-8c185cb1d043: Pulling fs layer
-03378c9d9fb2: Pulling fs layer
-558bec3d1149: Pulling fs layer
-cf51797a530c: Pulling fs layer
-e2634533fc3d: Pulling fs layer
-35127720beb2: Pulling fs layer
-de47c8406856: Pulling fs layer
-f23c3122d7ce: Pulling fs layer
-bede9f090cef: Pulling fs layer
-eaef47d0d7e8: Pulling fs layer
-a74d8df13f74: Pulling fs layer
-728fa2140e7d: Pulling fs layer
-495c87e93332: Waiting
-e6d1a0b1d761: Waiting
-e4357c3f3ae6: Waiting
-6823fd269082: Waiting
-c8b3a6787d36: Waiting
-8f1d592ed584: Waiting
-6457abe9a4c8: Waiting
-1ac6a5ddcac4: Waiting
-8c185cb1d043: Waiting
-03378c9d9fb2: Waiting
-558bec3d1149: Waiting
-cf51797a530c: Waiting
-e2634533fc3d: Waiting
-35127720beb2: Waiting
-de47c8406856: Waiting
-f23c3122d7ce: Waiting
-bede9f090cef: Waiting
-eaef47d0d7e8: Waiting
-a74d8df13f74: Waiting
-728fa2140e7d: Waiting
-c4394a92d1f8: Verifying Checksum
-c4394a92d1f8: Download complete
-10e6159c56c0: Verifying Checksum
-10e6159c56c0: Download complete
-e6d1a0b1d761: Verifying Checksum
-e6d1a0b1d761: Download complete
-495c87e93332: Verifying Checksum
-495c87e93332: Download complete
-a70d879fa598: Verifying Checksum
-a70d879fa598: Download complete
-c8b3a6787d36: Verifying Checksum
-c8b3a6787d36: Download complete
-e4357c3f3ae6: Verifying Checksum
-e4357c3f3ae6: Download complete
-8f1d592ed584: Verifying Checksum
-8f1d592ed584: Download complete
-a70d879fa598: Pull complete
-c4394a92d1f8: Pull complete
-10e6159c56c0: Pull complete
-495c87e93332: Pull complete
-e6d1a0b1d761: Pull complete
-1ac6a5ddcac4: Verifying Checksum
-1ac6a5ddcac4: Download complete
-e4357c3f3ae6: Pull complete
-8c185cb1d043: Verifying Checksum
-8c185cb1d043: Download complete
-6823fd269082: Verifying Checksum
-6823fd269082: Download complete
-6457abe9a4c8: Verifying Checksum
-6457abe9a4c8: Download complete
-558bec3d1149: Verifying Checksum
-558bec3d1149: Download complete
-03378c9d9fb2: Verifying Checksum
-03378c9d9fb2: Download complete
-6823fd269082: Pull complete
-c8b3a6787d36: Pull complete
-35127720beb2: Verifying Checksum
-35127720beb2: Download complete
-8f1d592ed584: Pull complete
-de47c8406856: Verifying Checksum
-de47c8406856: Download complete
-f23c3122d7ce: Verifying Checksum
-f23c3122d7ce: Download complete
-bede9f090cef: Verifying Checksum
-bede9f090cef: Download complete
-eaef47d0d7e8: Verifying Checksum
-eaef47d0d7e8: Download complete
-a74d8df13f74: Verifying Checksum
-a74d8df13f74: Download complete
-728fa2140e7d: Verifying Checksum
-728fa2140e7d: Download complete
-e2634533fc3d: Verifying Checksum
-e2634533fc3d: Download complete
-cf51797a530c: Verifying Checksum
-cf51797a530c: Download complete
-6457abe9a4c8: Pull complete
-1ac6a5ddcac4: Pull complete
-8c185cb1d043: Pull complete
-03378c9d9fb2: Pull complete
-558bec3d1149: Pull complete
-cf51797a530c: Pull complete
-e2634533fc3d: Pull complete
-35127720beb2: Pull complete
-de47c8406856: Pull complete
-f23c3122d7ce: Pull complete
-bede9f090cef: Pull complete
-eaef47d0d7e8: Pull complete
-a74d8df13f74: Pull complete
-728fa2140e7d: Pull complete
-Digest: sha256:7e20af6283375b4c816a5f334832872feeeadc155ebb602c094cf00ac5940a34
-Status: Downloaded newer image for nciccbr/ccbr_ubuntu_base_20.04:v1.3
+Step 1/45 : FROM nciccbr/ccbr_ubuntu_base_20.04:v1.3
  ---> 97fa0784ffda
-Step 2/43 : RUN apt-get upgrade
- ---> Running in ad36c7b0ab83
+Step 2/45 : ENV TAG="v0.2"
+ ---> Running in 328247776c9c
+Removing intermediate container 328247776c9c
+ ---> 35b60a139fa6
+Step 3/45 : RUN apt-get upgrade -y
+ ---> Running in 105b2cf90258
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -127,5 +16,793 @@ The following packages will be upgraded:
 7 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 Need to get 2779 kB of archives.
 After this operation, 193 kB disk space will be freed.
-[91mE[0m[91m: [0m[91mYou don't have enough free space in /var/cache/apt/archives/.[0m[91m
-[0m
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsystemd0 amd64 245.4-4ubuntu3.6 [269 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libudev1 amd64 245.4-4ubuntu3.6 [77.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libapt-pkg6.0 amd64 2.0.5 [834 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libseccomp2 amd64 2.5.1-1ubuntu1~20.04.1 [42.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apt amd64 2.0.5 [1290 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libprocps8 amd64 2:3.3.16-1ubuntu2.1 [33.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 procps amd64 2:3.3.16-1ubuntu2.1 [233 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 2779 kB in 2s (1481 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../libsystemd0_245.4-4ubuntu3.6_amd64.deb ...
+Unpacking libsystemd0:amd64 (245.4-4ubuntu3.6) over (245.4-4ubuntu3.5) ...
+Setting up libsystemd0:amd64 (245.4-4ubuntu3.6) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../libudev1_245.4-4ubuntu3.6_amd64.deb ...
+Unpacking libudev1:amd64 (245.4-4ubuntu3.6) over (245.4-4ubuntu3.5) ...
+Setting up libudev1:amd64 (245.4-4ubuntu3.6) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg6.0_2.0.5_amd64.deb ...
+Unpacking libapt-pkg6.0:amd64 (2.0.5) over (2.0.4) ...
+Setting up libapt-pkg6.0:amd64 (2.0.5) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../libseccomp2_2.5.1-1ubuntu1~20.04.1_amd64.deb ...
+Unpacking libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.1) over (2.4.3-1ubuntu3.20.04.3) ...
+Setting up libseccomp2:amd64 (2.5.1-1ubuntu1~20.04.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../archives/apt_2.0.5_amd64.deb ...
+Unpacking apt (2.0.5) over (2.0.4) ...
+Setting up apt (2.0.5) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../libprocps8_2%3a3.3.16-1ubuntu2.1_amd64.deb ...
+Unpacking libprocps8:amd64 (2:3.3.16-1ubuntu2.1) over (2:3.3.16-1ubuntu2) ...
+Preparing to unpack .../procps_2%3a3.3.16-1ubuntu2.1_amd64.deb ...
+Unpacking procps (2:3.3.16-1ubuntu2.1) over (2:3.3.16-1ubuntu2) ...
+Setting up libprocps8:amd64 (2:3.3.16-1ubuntu2.1) ...
+Setting up procps (2:3.3.16-1ubuntu2.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+Removing intermediate container 105b2cf90258
+ ---> cb90033a732c
+Step 4/45 : RUN	pip3 install cutadapt==1.18
+ ---> Running in bd7805307603
+Collecting cutadapt==1.18
+  Downloading cutadapt-1.18.tar.gz (342 kB)
+Collecting xopen>=0.3.2
+  Downloading xopen-1.1.0-py2.py3-none-any.whl (10 kB)
+Collecting isal>=0.3.0
+  Downloading isal-0.10.0-cp38-cp38-manylinux2014_x86_64.whl (989 kB)
+Building wheels for collected packages: cutadapt
+  Building wheel for cutadapt (setup.py): started
+  Building wheel for cutadapt (setup.py): finished with status 'done'
+  Created wheel for cutadapt: filename=cutadapt-1.18-cp38-cp38-linux_x86_64.whl size=702419 sha256=13c25683cf4340a31c1dee5ab7503992a504fde56d33d92c2ad0bac485f06f64
+  Stored in directory: /root/.cache/pip/wheels/23/35/64/47cc36c735b7a1ba414d178636ff733743962701458ca67dc2
+Successfully built cutadapt
+Installing collected packages: isal, xopen, cutadapt
+Successfully installed cutadapt-1.18 isal-0.10.0 xopen-1.1.0
+Removing intermediate container bd7805307603
+ ---> 8eaea5989cd9
+Step 5/45 : RUN apt-get install -y libcurl4 libcurl4-openssl-dev
+ ---> Running in d865dad6a8a1
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libcurl4 is already the newest version (7.68.0-1ubuntu2.5).
+libcurl4 set to manually installed.
+Suggested packages:
+  libcurl4-doc libidn11-dev libkrb5-dev libldap2-dev libssh2-1-dev
+The following NEW packages will be installed:
+  libcurl4-openssl-dev
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 321 kB of archives.
+After this operation, 1539 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcurl4-openssl-dev amd64 7.68.0-1ubuntu2.5 [321 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 321 kB in 1s (381 kB/s)
+Selecting previously unselected package libcurl4-openssl-dev:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 71174 files and directories currently installed.)
+Preparing to unpack .../libcurl4-openssl-dev_7.68.0-1ubuntu2.5_amd64.deb ...
+Unpacking libcurl4-openssl-dev:amd64 (7.68.0-1ubuntu2.5) ...
+Setting up libcurl4-openssl-dev:amd64 (7.68.0-1ubuntu2.5) ...
+Removing intermediate container d865dad6a8a1
+ ---> ef0014c2c1bc
+Step 6/45 : WORKDIR /opt2
+ ---> Running in d5eb155a0edc
+Removing intermediate container d5eb155a0edc
+ ---> 08eddb47f57c
+Step 7/45 : ADD https://github.com/samtools/htslib/releases/download/1.12/htslib-1.12.tar.bz2 /opt2
+
+
+ ---> 98f2e3e9cbb0
+Step 8/45 : RUN tar -xjvf htslib-1.12.tar.bz2
+ ---> Running in 94742c809bd4
+htslib-1.12/
+htslib-1.12/INSTALL
+htslib-1.12/LICENSE
+htslib-1.12/Makefile
+htslib-1.12/NEWS
+htslib-1.12/README
+htslib-1.12/README.large_positions.md
+htslib-1.12/bcf_sr_sort.c
+htslib-1.12/bcf_sr_sort.h
+htslib-1.12/bgzf.c
+htslib-1.12/bgzip.1
+htslib-1.12/bgzip.c
+htslib-1.12/config.mk.in
+htslib-1.12/configure.ac
+htslib-1.12/cram/
+htslib-1.12/cram/cram.h
+htslib-1.12/cram/cram_codecs.c
+htslib-1.12/cram/cram_codecs.h
+htslib-1.12/cram/cram_decode.c
+htslib-1.12/cram/cram_decode.h
+htslib-1.12/cram/cram_encode.c
+htslib-1.12/cram/cram_encode.h
+htslib-1.12/cram/cram_external.c
+htslib-1.12/cram/cram_index.c
+htslib-1.12/cram/cram_index.h
+htslib-1.12/cram/cram_io.c
+htslib-1.12/cram/cram_io.h
+htslib-1.12/cram/cram_samtools.h
+htslib-1.12/cram/cram_stats.c
+htslib-1.12/cram/cram_stats.h
+htslib-1.12/cram/cram_structs.h
+htslib-1.12/cram/mFILE.c
+htslib-1.12/cram/mFILE.h
+htslib-1.12/cram/misc.h
+htslib-1.12/cram/open_trace_file.c
+htslib-1.12/cram/open_trace_file.h
+htslib-1.12/cram/os.h
+htslib-1.12/cram/pooled_alloc.c
+htslib-1.12/cram/pooled_alloc.h
+htslib-1.12/cram/string_alloc.c
+htslib-1.12/cram/string_alloc.h
+htslib-1.12/errmod.c
+htslib-1.12/faidx.5
+htslib-1.12/faidx.c
+htslib-1.12/header.c
+htslib-1.12/header.h
+htslib-1.12/hfile.c
+htslib-1.12/hfile_gcs.c
+htslib-1.12/hfile_internal.h
+htslib-1.12/hfile_libcurl.c
+htslib-1.12/hfile_s3.c
+htslib-1.12/hfile_s3_write.c
+htslib-1.12/hts.c
+htslib-1.12/hts_expr.c
+htslib-1.12/hts_internal.h
+htslib-1.12/hts_os.c
+htslib-1.12/htscodecs/
+htslib-1.12/htscodecs/LICENSE.md
+htslib-1.12/htscodecs/NEWS
+htslib-1.12/htscodecs/htscodecs/
+htslib-1.12/htscodecs/htscodecs/arith_dynamic.c
+htslib-1.12/htscodecs/htscodecs/arith_dynamic.h
+htslib-1.12/htscodecs/htscodecs/c_range_coder.h
+htslib-1.12/htscodecs/htscodecs/c_simple_model.h
+htslib-1.12/htscodecs/htscodecs/fqzcomp_qual.c
+htslib-1.12/htscodecs/htscodecs/fqzcomp_qual.h
+htslib-1.12/htscodecs/htscodecs/htscodecs.c
+htslib-1.12/htscodecs/htscodecs/htscodecs.h
+htslib-1.12/htscodecs/htscodecs/htscodecs_endian.h
+htslib-1.12/htscodecs/htscodecs/pack.c
+htslib-1.12/htscodecs/htscodecs/pack.h
+htslib-1.12/htscodecs/htscodecs/pooled_alloc.h
+htslib-1.12/htscodecs/htscodecs/rANS_byte.h
+htslib-1.12/htscodecs/htscodecs/rANS_static.c
+htslib-1.12/htscodecs/htscodecs/rANS_static.h
+htslib-1.12/htscodecs/htscodecs/rANS_static4x16.h
+htslib-1.12/htscodecs/htscodecs/rANS_static4x16pr.c
+htslib-1.12/htscodecs/htscodecs/rANS_word.h
+htslib-1.12/htscodecs/htscodecs/rle.c
+htslib-1.12/htscodecs/htscodecs/rle.h
+htslib-1.12/htscodecs/htscodecs/tokenise_name3.c
+htslib-1.12/htscodecs/htscodecs/tokenise_name3.h
+htslib-1.12/htscodecs/htscodecs/utils.h
+htslib-1.12/htscodecs/htscodecs/varint.h
+htslib-1.12/htscodecs/htscodecs/varint2.h
+htslib-1.12/htscodecs/htscodecs/version.h
+htslib-1.12/htscodecs/tests/
+htslib-1.12/htscodecs/tests/arith.test
+htslib-1.12/htscodecs/tests/arith_dynamic_fuzz.c
+htslib-1.12/htscodecs/tests/arith_dynamic_test.c
+htslib-1.12/htscodecs/tests/dat/
+htslib-1.12/htscodecs/tests/dat/arith/
+htslib-1.12/htscodecs/tests/dat/arith/q4.0
+htslib-1.12/htscodecs/tests/dat/arith/q4.1
+htslib-1.12/htscodecs/tests/dat/arith/q4.128
+htslib-1.12/htscodecs/tests/dat/arith/q4.129
+htslib-1.12/htscodecs/tests/dat/arith/q4.192
+htslib-1.12/htscodecs/tests/dat/arith/q4.193
+htslib-1.12/htscodecs/tests/dat/arith/q4.64
+htslib-1.12/htscodecs/tests/dat/arith/q4.65
+htslib-1.12/htscodecs/tests/dat/arith/q4.8
+htslib-1.12/htscodecs/tests/dat/arith/q4.9
+htslib-1.12/htscodecs/tests/dat/arith/q40+dir.0
+htslib-1.12/htscodecs/tests/dat/arith/q40+dir.1
+htslib-1.12/htscodecs/tests/dat/arith/q40+dir.64
+htslib-1.12/htscodecs/tests/dat/arith/q40+dir.65
+htslib-1.12/htscodecs/tests/dat/arith/q40+dir.8
+htslib-1.12/htscodecs/tests/dat/arith/q40+dir.9
+htslib-1.12/htscodecs/tests/dat/arith/q8.0
+htslib-1.12/htscodecs/tests/dat/arith/q8.1
+htslib-1.12/htscodecs/tests/dat/arith/q8.128
+htslib-1.12/htscodecs/tests/dat/arith/q8.129
+htslib-1.12/htscodecs/tests/dat/arith/q8.192
+htslib-1.12/htscodecs/tests/dat/arith/q8.193
+htslib-1.12/htscodecs/tests/dat/arith/q8.64
+htslib-1.12/htscodecs/tests/dat/arith/q8.65
+htslib-1.12/htscodecs/tests/dat/arith/qvar.0
+htslib-1.12/htscodecs/tests/dat/arith/qvar.1
+htslib-1.12/htscodecs/tests/dat/arith/qvar.64
+htslib-1.12/htscodecs/tests/dat/arith/qvar.65
+htslib-1.12/htscodecs/tests/dat/fqzcomp/
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q4.0
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q4.1
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q4.2
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q4.3
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q40+dir.0
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q40+dir.1
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q40+dir.2
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q40+dir.3
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q8.0
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q8.1
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q8.2
+htslib-1.12/htscodecs/tests/dat/fqzcomp/q8.3
+htslib-1.12/htscodecs/tests/dat/fqzcomp/qvar.0
+htslib-1.12/htscodecs/tests/dat/fqzcomp/qvar.1
+htslib-1.12/htscodecs/tests/dat/fqzcomp/qvar.2
+htslib-1.12/htscodecs/tests/dat/fqzcomp/qvar.3
+htslib-1.12/htscodecs/tests/dat/q4
+htslib-1.12/htscodecs/tests/dat/q40+dir
+htslib-1.12/htscodecs/tests/dat/q8
+htslib-1.12/htscodecs/tests/dat/qvar
+htslib-1.12/htscodecs/tests/dat/r4x16/
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.0
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.1
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.128
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.129
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.192
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.193
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.64
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.65
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.8
+htslib-1.12/htscodecs/tests/dat/r4x16/q4.9
+htslib-1.12/htscodecs/tests/dat/r4x16/q40+dir.0
+htslib-1.12/htscodecs/tests/dat/r4x16/q40+dir.1
+htslib-1.12/htscodecs/tests/dat/r4x16/q40+dir.8
+htslib-1.12/htscodecs/tests/dat/r4x16/q40+dir.9
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.0
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.1
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.128
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.129
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.192
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.193
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.64
+htslib-1.12/htscodecs/tests/dat/r4x16/q8.65
+htslib-1.12/htscodecs/tests/dat/r4x16/qvar.0
+htslib-1.12/htscodecs/tests/dat/r4x16/qvar.1
+htslib-1.12/htscodecs/tests/dat/r4x8/
+htslib-1.12/htscodecs/tests/dat/r4x8/q4.0
+htslib-1.12/htscodecs/tests/dat/r4x8/q4.1
+htslib-1.12/htscodecs/tests/dat/r4x8/q40+dir.0
+htslib-1.12/htscodecs/tests/dat/r4x8/q40+dir.1
+htslib-1.12/htscodecs/tests/dat/r4x8/q8.0
+htslib-1.12/htscodecs/tests/dat/r4x8/q8.1
+htslib-1.12/htscodecs/tests/dat/r4x8/qvar.0
+htslib-1.12/htscodecs/tests/dat/r4x8/qvar.1
+htslib-1.12/htscodecs/tests/fqzcomp.test
+htslib-1.12/htscodecs/tests/fqzcomp_qual_fuzz.c
+htslib-1.12/htscodecs/tests/fqzcomp_qual_test.c
+htslib-1.12/htscodecs/tests/names/
+htslib-1.12/htscodecs/tests/names/01.names
+htslib-1.12/htscodecs/tests/names/02.names
+htslib-1.12/htscodecs/tests/names/03.names
+htslib-1.12/htscodecs/tests/names/05.names
+htslib-1.12/htscodecs/tests/names/08.names
+htslib-1.12/htscodecs/tests/names/09.names
+htslib-1.12/htscodecs/tests/names/10.names
+htslib-1.12/htscodecs/tests/names/20.names
+htslib-1.12/htscodecs/tests/names/nv.names
+htslib-1.12/htscodecs/tests/names/nv2.names
+htslib-1.12/htscodecs/tests/names/rr.names
+htslib-1.12/htscodecs/tests/names/tok3/
+htslib-1.12/htscodecs/tests/names/tok3/01.names.1
+htslib-1.12/htscodecs/tests/names/tok3/01.names.11
+htslib-1.12/htscodecs/tests/names/tok3/01.names.13
+htslib-1.12/htscodecs/tests/names/tok3/01.names.15
+htslib-1.12/htscodecs/tests/names/tok3/01.names.17
+htslib-1.12/htscodecs/tests/names/tok3/01.names.19
+htslib-1.12/htscodecs/tests/names/tok3/01.names.3
+htslib-1.12/htscodecs/tests/names/tok3/01.names.5
+htslib-1.12/htscodecs/tests/names/tok3/01.names.7
+htslib-1.12/htscodecs/tests/names/tok3/01.names.9
+htslib-1.12/htscodecs/tests/names/tok3/02.names.1
+htslib-1.12/htscodecs/tests/names/tok3/02.names.11
+htslib-1.12/htscodecs/tests/names/tok3/02.names.13
+htslib-1.12/htscodecs/tests/names/tok3/02.names.15
+htslib-1.12/htscodecs/tests/names/tok3/02.names.17
+htslib-1.12/htscodecs/tests/names/tok3/02.names.19
+htslib-1.12/htscodecs/tests/names/tok3/02.names.3
+htslib-1.12/htscodecs/tests/names/tok3/02.names.5
+htslib-1.12/htscodecs/tests/names/tok3/02.names.7
+htslib-1.12/htscodecs/tests/names/tok3/02.names.9
+htslib-1.12/htscodecs/tests/names/tok3/03.names.1
+htslib-1.12/htscodecs/tests/names/tok3/03.names.11
+htslib-1.12/htscodecs/tests/names/tok3/03.names.13
+htslib-1.12/htscodecs/tests/names/tok3/03.names.15
+htslib-1.12/htscodecs/tests/names/tok3/03.names.17
+htslib-1.12/htscodecs/tests/names/tok3/03.names.19
+htslib-1.12/htscodecs/tests/names/tok3/03.names.3
+htslib-1.12/htscodecs/tests/names/tok3/03.names.5
+htslib-1.12/htscodecs/tests/names/tok3/03.names.7
+htslib-1.12/htscodecs/tests/names/tok3/03.names.9
+htslib-1.12/htscodecs/tests/names/tok3/05.names.1
+htslib-1.12/htscodecs/tests/names/tok3/05.names.11
+htslib-1.12/htscodecs/tests/names/tok3/05.names.13
+htslib-1.12/htscodecs/tests/names/tok3/05.names.15
+htslib-1.12/htscodecs/tests/names/tok3/05.names.17
+htslib-1.12/htscodecs/tests/names/tok3/05.names.19
+htslib-1.12/htscodecs/tests/names/tok3/05.names.3
+htslib-1.12/htscodecs/tests/names/tok3/05.names.5
+htslib-1.12/htscodecs/tests/names/tok3/05.names.7
+htslib-1.12/htscodecs/tests/names/tok3/05.names.9
+htslib-1.12/htscodecs/tests/names/tok3/08.names.1
+htslib-1.12/htscodecs/tests/names/tok3/08.names.11
+htslib-1.12/htscodecs/tests/names/tok3/08.names.13
+htslib-1.12/htscodecs/tests/names/tok3/08.names.15
+htslib-1.12/htscodecs/tests/names/tok3/08.names.17
+htslib-1.12/htscodecs/tests/names/tok3/08.names.19
+htslib-1.12/htscodecs/tests/names/tok3/08.names.3
+htslib-1.12/htscodecs/tests/names/tok3/08.names.5
+htslib-1.12/htscodecs/tests/names/tok3/08.names.7
+htslib-1.12/htscodecs/tests/names/tok3/08.names.9
+htslib-1.12/htscodecs/tests/names/tok3/09.names.1
+htslib-1.12/htscodecs/tests/names/tok3/09.names.11
+htslib-1.12/htscodecs/tests/names/tok3/09.names.13
+htslib-1.12/htscodecs/tests/names/tok3/09.names.15
+htslib-1.12/htscodecs/tests/names/tok3/09.names.17
+htslib-1.12/htscodecs/tests/names/tok3/09.names.19
+htslib-1.12/htscodecs/tests/names/tok3/09.names.3
+htslib-1.12/htscodecs/tests/names/tok3/09.names.5
+htslib-1.12/htscodecs/tests/names/tok3/09.names.7
+htslib-1.12/htscodecs/tests/names/tok3/09.names.9
+htslib-1.12/htscodecs/tests/names/tok3/10.names.1
+htslib-1.12/htscodecs/tests/names/tok3/10.names.11
+htslib-1.12/htscodecs/tests/names/tok3/10.names.13
+htslib-1.12/htscodecs/tests/names/tok3/10.names.15
+htslib-1.12/htscodecs/tests/names/tok3/10.names.17
+htslib-1.12/htscodecs/tests/names/tok3/10.names.19
+htslib-1.12/htscodecs/tests/names/tok3/10.names.3
+htslib-1.12/htscodecs/tests/names/tok3/10.names.5
+htslib-1.12/htscodecs/tests/names/tok3/10.names.7
+htslib-1.12/htscodecs/tests/names/tok3/10.names.9
+htslib-1.12/htscodecs/tests/names/tok3/20.names.1
+htslib-1.12/htscodecs/tests/names/tok3/20.names.11
+htslib-1.12/htscodecs/tests/names/tok3/20.names.13
+htslib-1.12/htscodecs/tests/names/tok3/20.names.15
+htslib-1.12/htscodecs/tests/names/tok3/20.names.17
+htslib-1.12/htscodecs/tests/names/tok3/20.names.19
+htslib-1.12/htscodecs/tests/names/tok3/20.names.3
+htslib-1.12/htscodecs/tests/names/tok3/20.names.5
+htslib-1.12/htscodecs/tests/names/tok3/20.names.7
+htslib-1.12/htscodecs/tests/names/tok3/20.names.9
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.1
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.11
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.13
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.15
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.17
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.19
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.3
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.5
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.7
+htslib-1.12/htscodecs/tests/names/tok3/nv.names.9
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.1
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.11
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.13
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.15
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.17
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.19
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.3
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.5
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.7
+htslib-1.12/htscodecs/tests/names/tok3/nv2.names.9
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.1
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.11
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.13
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.15
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.17
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.19
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.3
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.5
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.7
+htslib-1.12/htscodecs/tests/names/tok3/rr.names.9
+htslib-1.12/htscodecs/tests/rANS_static4x16pr_fuzz.c
+htslib-1.12/htscodecs/tests/rANS_static4x16pr_test.c
+htslib-1.12/htscodecs/tests/rANS_static_fuzz.c
+htslib-1.12/htscodecs/tests/rANS_static_test.c
+htslib-1.12/htscodecs/tests/rans4x16.test
+htslib-1.12/htscodecs/tests/rans4x8.test
+htslib-1.12/htscodecs/tests/tok3.test
+htslib-1.12/htscodecs/tests/tokenise_name3_fuzz.c
+htslib-1.12/htscodecs/tests/tokenise_name3_test.c
+htslib-1.12/htscodecs/tests/varint_test.c
+htslib-1.12/htscodecs.mk.in
+htslib-1.12/htscodecs_bundled.mk
+htslib-1.12/htscodecs_external.mk
+htslib-1.12/htsfile.1
+htslib-1.12/htsfile.c
+htslib-1.12/htslib-s3-plugin.7
+htslib-1.12/htslib.mk
+htslib-1.12/htslib.pc.in
+htslib-1.12/htslib/
+htslib-1.12/htslib/bgzf.h
+htslib-1.12/htslib/cram.h
+htslib-1.12/htslib/faidx.h
+htslib-1.12/htslib/hfile.h
+htslib-1.12/htslib/hts.h
+htslib-1.12/htslib/hts_defs.h
+htslib-1.12/htslib/hts_endian.h
+htslib-1.12/htslib/hts_expr.h
+htslib-1.12/htslib/hts_log.h
+htslib-1.12/htslib/hts_os.h
+htslib-1.12/htslib/kbitset.h
+htslib-1.12/htslib/kfunc.h
+htslib-1.12/htslib/khash.h
+htslib-1.12/htslib/khash_str2int.h
+htslib-1.12/htslib/klist.h
+htslib-1.12/htslib/knetfile.h
+htslib-1.12/htslib/kroundup.h
+htslib-1.12/htslib/kseq.h
+htslib-1.12/htslib/ksort.h
+htslib-1.12/htslib/kstring.h
+htslib-1.12/htslib/regidx.h
+htslib-1.12/htslib/sam.h
+htslib-1.12/htslib/synced_bcf_reader.h
+htslib-1.12/htslib/tbx.h
+htslib-1.12/htslib/thread_pool.h
+htslib-1.12/htslib/vcf.h
+htslib-1.12/htslib/vcf_sweep.h
+htslib-1.12/htslib/vcfutils.h
+htslib-1.12/htslib_vars.mk
+htslib-1.12/kfunc.c
+htslib-1.12/kstring.c
+htslib-1.12/m4/
+htslib-1.12/m4/hts_hide_dynamic_syms.m4
+htslib-1.12/m4/hts_prog_cc_warnings.m4
+htslib-1.12/m4/pkg.m4
+htslib-1.12/md5.c
+htslib-1.12/multipart.c
+htslib-1.12/os/
+htslib-1.12/os/lzma_stub.h
+htslib-1.12/os/rand.c
+htslib-1.12/plugin.c
+htslib-1.12/probaln.c
+htslib-1.12/realn.c
+htslib-1.12/regidx.c
+htslib-1.12/region.c
+htslib-1.12/sam.5
+htslib-1.12/sam.c
+htslib-1.12/sam_internal.h
+htslib-1.12/synced_bcf_reader.c
+htslib-1.12/tabix.1
+htslib-1.12/tabix.c
+htslib-1.12/tbx.c
+htslib-1.12/test/
+htslib-1.12/test/auxf#values.sam
+htslib-1.12/test/auxf#values_java.cram
+htslib-1.12/test/auxf.fa
+htslib-1.12/test/auxf.fa.fai
+htslib-1.12/test/bcf-sr/
+htslib-1.12/test/bcf-sr/merge.noidx.a.vcf
+htslib-1.12/test/bcf-sr/merge.noidx.abc.expected.out
+htslib-1.12/test/bcf-sr/merge.noidx.b.vcf
+htslib-1.12/test/bcf-sr/merge.noidx.c.vcf
+htslib-1.12/test/bcf-sr/merge.noidx.hdr_order.vcf
+htslib-1.12/test/bcf-sr/merge.noidx.rec_order.vcf
+htslib-1.12/test/bgziptest.txt
+htslib-1.12/test/bgziptest.txt.gz
+htslib-1.12/test/bgziptest.txt.gz.gzi
+htslib-1.12/test/c1#bounds.sam
+htslib-1.12/test/c1#clip.sam
+htslib-1.12/test/c1#noseq.sam
+htslib-1.12/test/c1#pad1.sam
+htslib-1.12/test/c1#pad2.sam
+htslib-1.12/test/c1#pad3.sam
+htslib-1.12/test/c1#unknown.sam
+htslib-1.12/test/c1.fa
+htslib-1.12/test/c1.fa.fai
+htslib-1.12/test/c2#pad.sam
+htslib-1.12/test/c2.fa
+htslib-1.12/test/c2.fa.fai
+htslib-1.12/test/ce#1.sam
+htslib-1.12/test/ce#1000.sam
+htslib-1.12/test/ce#2.sam
+htslib-1.12/test/ce#5.sam
+htslib-1.12/test/ce#5b.sam
+htslib-1.12/test/ce#5b_java.cram
+htslib-1.12/test/ce#large_seq.sam
+htslib-1.12/test/ce#supp.sam
+htslib-1.12/test/ce#tag_depadded.sam
+htslib-1.12/test/ce#tag_padded.sam
+htslib-1.12/test/ce#unmap.sam
+htslib-1.12/test/ce#unmap1.sam
+htslib-1.12/test/ce#unmap2.sam
+htslib-1.12/test/ce.fa
+htslib-1.12/test/ce.fa.fai
+htslib-1.12/test/colons.bam
+htslib-1.12/test/colons.bam.bai
+htslib-1.12/test/compare_sam.pl
+htslib-1.12/test/cross_validate.sh
+htslib-1.12/test/emptyfile
+htslib-1.12/test/faidx.fa
+htslib-1.12/test/fastqs.fq
+htslib-1.12/test/fastqs_README.txt
+htslib-1.12/test/fieldarith.c
+htslib-1.12/test/fieldarith.sam
+htslib-1.12/test/formatcols.vcf
+htslib-1.12/test/formatmissing-out.vcf
+htslib-1.12/test/formatmissing.vcf
+htslib-1.12/test/fuzz/
+htslib-1.12/test/fuzz/hts_open_fuzzer.c
+htslib-1.12/test/header_syms.pl
+htslib-1.12/test/hfile.c
+htslib-1.12/test/hts_endian.c
+htslib-1.12/test/index.bam.bai
+htslib-1.12/test/index.bam.csi
+htslib-1.12/test/index.bcf.csi
+htslib-1.12/test/index.cram.crai
+htslib-1.12/test/index.sam
+htslib-1.12/test/index.sam.gz.bai
+htslib-1.12/test/index.sam.gz.csi
+htslib-1.12/test/index.vcf
+htslib-1.12/test/index.vcf.gz.csi
+htslib-1.12/test/index.vcf.gz.tbi
+htslib-1.12/test/index_dos.sam
+htslib-1.12/test/longrefs/
+htslib-1.12/test/longrefs/index.expected1.vcf
+htslib-1.12/test/longrefs/index.expected2.vcf
+htslib-1.12/test/longrefs/index.vcf
+htslib-1.12/test/longrefs/longref.sam
+htslib-1.12/test/longrefs/longref_itr.expected.sam
+htslib-1.12/test/longrefs/longref_multi.expected.sam
+htslib-1.12/test/maintainer/
+htslib-1.12/test/maintainer/check_copyright.pl
+htslib-1.12/test/maintainer/check_spaces.pl
+htslib-1.12/test/md#1.sam
+htslib-1.12/test/md.fa
+htslib-1.12/test/md.fa.fai
+htslib-1.12/test/mpileup/
+htslib-1.12/test/mpileup/c1#pad1.out
+htslib-1.12/test/mpileup/c1#pad1.sam
+htslib-1.12/test/mpileup/c1#pad2.out
+htslib-1.12/test/mpileup/c1#pad2.sam
+htslib-1.12/test/mpileup/c1#pad3.out
+htslib-1.12/test/mpileup/c1#pad3.sam
+htslib-1.12/test/mpileup/mp_D.out
+htslib-1.12/test/mpileup/mp_D.sam
+htslib-1.12/test/mpileup/mp_DI.out
+htslib-1.12/test/mpileup/mp_DI.sam
+htslib-1.12/test/mpileup/mp_I.out
+htslib-1.12/test/mpileup/mp_I.sam
+htslib-1.12/test/mpileup/mp_ID.out
+htslib-1.12/test/mpileup/mp_ID.sam
+htslib-1.12/test/mpileup/mp_N.out
+htslib-1.12/test/mpileup/mp_N.sam
+htslib-1.12/test/mpileup/mp_N2.out
+htslib-1.12/test/mpileup/mp_N2.sam
+htslib-1.12/test/mpileup/mp_P.out
+htslib-1.12/test/mpileup/mp_P.sam
+htslib-1.12/test/mpileup/mpileup.tst
+htslib-1.12/test/mpileup/small.bam
+htslib-1.12/test/mpileup/small.out
+htslib-1.12/test/mpileup/test-pileup.sh
+htslib-1.12/test/no_hdr_sq_1.bam
+htslib-1.12/test/no_hdr_sq_1.bam.csi
+htslib-1.12/test/no_hdr_sq_1.expected.sam
+htslib-1.12/test/noroundtrip-out.vcf
+htslib-1.12/test/noroundtrip.vcf
+htslib-1.12/test/pileup.c
+htslib-1.12/test/plugins-dlhts.c
+htslib-1.12/test/range.bam
+htslib-1.12/test/range.bam.bai
+htslib-1.12/test/range.cram
+htslib-1.12/test/range.cram.crai
+htslib-1.12/test/range.out
+htslib-1.12/test/realn01.fa
+htslib-1.12/test/realn01.fa.fai
+htslib-1.12/test/realn01.sam
+htslib-1.12/test/realn01_exp-a.sam
+htslib-1.12/test/realn01_exp-e.sam
+htslib-1.12/test/realn01_exp.sam
+htslib-1.12/test/realn02-r.sam
+htslib-1.12/test/realn02.fa
+htslib-1.12/test/realn02.fa.fai
+htslib-1.12/test/realn02.sam
+htslib-1.12/test/realn02_exp-a.sam
+htslib-1.12/test/realn02_exp-e.sam
+htslib-1.12/test/realn02_exp.sam
+htslib-1.12/test/sam.c
+htslib-1.12/test/sam_filter/
+htslib-1.12/test/sam_filter/filter.sh
+htslib-1.12/test/sam_filter/filter.tst
+htslib-1.12/test/sam_filter/func1.out
+htslib-1.12/test/sam_filter/func2.out
+htslib-1.12/test/sam_filter/func3.out
+htslib-1.12/test/sam_filter/func4.out
+htslib-1.12/test/sam_filter/int1.out
+htslib-1.12/test/sam_filter/int2.out
+htslib-1.12/test/sam_filter/int3.out
+htslib-1.12/test/sam_filter/string1.out
+htslib-1.12/test/sam_filter/string2.out
+htslib-1.12/test/sam_filter/string3.out
+htslib-1.12/test/sam_filter/string4.out
+htslib-1.12/test/sam_filter/string5.out
+htslib-1.12/test/sam_filter/string6.out
+htslib-1.12/test/sam_filter/string7.out
+htslib-1.12/test/simple_test_driver.sh
+htslib-1.12/test/tabix.out
+htslib-1.12/test/tabix/
+htslib-1.12/test/tabix/bed_file.Y.100200.out
+htslib-1.12/test/tabix/bed_file.bed
+htslib-1.12/test/tabix/bed_file.separate.out
+htslib-1.12/test/tabix/gff_file.X.2934832.2935190.out
+htslib-1.12/test/tabix/gff_file.gff
+htslib-1.12/test/tabix/large_chr.20.1.2147483647.out
+htslib-1.12/test/tabix/large_chr.vcf
+htslib-1.12/test/tabix/tabix.tst
+htslib-1.12/test/tabix/test-tabix.sh
+htslib-1.12/test/tabix/vcf_file.1.3000151.out
+htslib-1.12/test/tabix/vcf_file.2.3199812.out
+htslib-1.12/test/tabix/vcf_file.bcf
+htslib-1.12/test/tabix/vcf_file.vcf
+htslib-1.12/test/test-bcf-sr.c
+htslib-1.12/test/test-bcf-sr.pl
+htslib-1.12/test/test-bcf-translate.c
+htslib-1.12/test/test-bcf-translate.out
+htslib-1.12/test/test-logging.pl
+htslib-1.12/test/test-parse-reg.c
+htslib-1.12/test/test-regidx.c
+htslib-1.12/test/test-vcf-api.c
+htslib-1.12/test/test-vcf-api.out
+htslib-1.12/test/test-vcf-hdr-in.vcf
+htslib-1.12/test/test-vcf-hdr.out
+htslib-1.12/test/test-vcf-sweep.c
+htslib-1.12/test/test-vcf-sweep.out
+htslib-1.12/test/test.pl
+htslib-1.12/test/test_bgzf.c
+htslib-1.12/test/test_expr.c
+htslib-1.12/test/test_index.c
+htslib-1.12/test/test_introspection.c
+htslib-1.12/test/test_kfunc.c
+htslib-1.12/test/test_kstring.c
+htslib-1.12/test/test_realn.c
+htslib-1.12/test/test_str2int.c
+htslib-1.12/test/test_view.c
+htslib-1.12/test/thrash_threads1.c
+htslib-1.12/test/thrash_threads2.c
+htslib-1.12/test/thrash_threads3.c
+htslib-1.12/test/thrash_threads4.c
+htslib-1.12/test/thrash_threads5.c
+htslib-1.12/test/thrash_threads6.c
+htslib-1.12/test/thrash_threads7.c
+htslib-1.12/test/thread_pool.md
+htslib-1.12/test/with-shlib.sh
+htslib-1.12/test/xx#MD.sam
+htslib-1.12/test/xx#MD2.sam
+htslib-1.12/test/xx#blank.sam
+htslib-1.12/test/xx#large_aux.sam
+htslib-1.12/test/xx#large_aux2.sam
+htslib-1.12/test/xx#large_aux_java.cram
+htslib-1.12/test/xx#minimal.sam
+htslib-1.12/test/xx#pair.sam
+htslib-1.12/test/xx#repeated.sam
+htslib-1.12/test/xx#rg.sam
+htslib-1.12/test/xx#tlen.sam
+htslib-1.12/test/xx#tlen2.sam
+htslib-1.12/test/xx#triplet.sam
+htslib-1.12/test/xx#unsorted.sam
+htslib-1.12/test/xx.fa
+htslib-1.12/test/xx.fa.fai
+htslib-1.12/textutils.c
+htslib-1.12/textutils_internal.h
+htslib-1.12/thread_pool.c
+htslib-1.12/thread_pool_internal.h
+htslib-1.12/vcf.5
+htslib-1.12/vcf.c
+htslib-1.12/vcf_sweep.c
+htslib-1.12/vcfutils.c
+htslib-1.12/version.sh
+htslib-1.12/config.h.in
+htslib-1.12/configure
+Removing intermediate container 94742c809bd4
+ ---> 48b313992aaa
+Step 9/45 : WORKDIR /opt2/htslib-1.12
+ ---> Running in 87577a49d9f9
+Removing intermediate container 87577a49d9f9
+ ---> 8b76ff1ec0a1
+Step 10/45 : RUN ./configure && make && make install
+ ---> Running in 1840d66baf8d
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for ranlib... ranlib
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for C compiler warning flags... -Wall
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking shared library type for unknown-Linux... plain .so
+checking whether the compiler accepts -fvisibility=hidden... yes
+checking how to run the C preprocessor... gcc -E
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... yes
+checking for getpagesize... yes
+checking for working mmap... yes
+checking for gmtime_r... yes
+checking for fsync... yes
+checking for drand48... yes
+checking for srand48_deterministic... no
+checking whether fdatasync is declared... yes
+checking for fdatasync... yes
+checking for library containing log... -lm
+checking for zlib.h... yes
+checking for inflate in -lz... yes
+checking for library containing recv... none required
+checking for bzlib.h... yes
+checking for BZ2_bzBuffToBuffCompress in -lbz2... yes
+checking for lzma.h... yes
+checking for lzma_easy_buffer_encode in -llzma... yes
+checking whether htscodecs files are present... yes
+checking for libdeflate.h... no
+checking for libdeflate_deflate_compress in -ldeflate... no
+checking for curl_easy_pause in -lcurl... yes
+checking for CCHmac... no
+checking for library containing HMAC... -lcrypto
+checking for library containing regcomp... none required
+checking whether PTHREAD_MUTEX_RECURSIVE is declared... yes
+configure: creating ./config.status
+config.status: creating config.mk
+config.status: creating htscodecs.mk
+config.status: creating htslib.pc.tmp
+config.status: creating config.h
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o kfunc.o kfunc.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o kstring.o kstring.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o bcf_sr_sort.o bcf_sr_sort.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o bgzf.o bgzf.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o errmod.o errmod.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o faidx.o faidx.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o header.o header.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o hfile.o hfile.c
+echo '#define HTS_VERSION_TEXT "1.12"' > version.h
+echo '#define HTS_CC "gcc"' > config_vars.h
+echo '#define HTS_CPPFLAGS ""' >> config_vars.h
+echo '#define HTS_CFLAGS "-Wall -g -O2 -fvisibility=hidden"' >> config_vars.h
+echo '#define HTS_LDFLAGS "-fvisibility=hidden "' >> config_vars.h
+echo '#define HTS_LIBS "-llzma -lbz2 -lz -lm   -lcurl -lcrypto"' >> config_vars.h
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o hts.o hts.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o hts_expr.o hts_expr.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o hts_os.o hts_os.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o md5.o md5.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o multipart.o multipart.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o probaln.o probaln.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o realn.o realn.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o regidx.o regidx.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o region.o region.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o sam.o sam.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o synced_bcf_reader.o synced_bcf_reader.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o vcf_sweep.o vcf_sweep.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o tbx.o tbx.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o textutils.o textutils.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o thread_pool.o thread_pool.c
+gcc -Wall -g -O2 -fvisibility=hidden -I.  -c -o vcf.o vcf.c
